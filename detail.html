@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curalis — Dr. Apurva K.C</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/detail.css"/>
+</head>
+<body>
+
+  <!--Nav Bar-->
+  <nav class="sidebar">
+    <div class="sidebar-logo"><img src="assets/img/logo.png" alt="Curalis"/></div>
+    <ul class="nav-links">
+      <li class="nav-item" data-page="home.html" title="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+        <span>Home</span>
+      </li>
+      <li class="nav-item" data-page="doctors.html" title="Doctors">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        <span>Doctors</span>
+      </li>
+      <li class="nav-item" data-page="bookings.html" title="Bookings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M12 14v4M10 16h4"/></svg>
+        <span>Bookings</span>
+      </li>
+      <li class="nav-item" data-page="about.html" title="About">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        <span>About</span>
+      </li>
+    </ul>
+    <div class="profile-wrap" id="profileWrap">
+      <img src="assets/img/profile.png" alt="Profile" class="profile-pic" id="profilePic"/>
+      <div class="profile-menu" id="profileMenu">
+        <button class="profile-menu-item" id="btnEditCard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Edit Health Card
+        </button>
+        <button class="profile-menu-item" id="btnLanguages">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          Languages
+        </button>
+        <button class="profile-menu-item logout" id="btnLogout">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          Logout
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+
+    <header class="topbar">
+      <nav class="breadcrumb">
+        <a href="doctors.html" class="bc-link">Doctors</a>
+        <span class="bc-sep">›</span>
+        <span class="bc-current">Dr. Apurva K.C</span>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="hero-left">
+        <img src="assets/img/doctor_apurva.png" alt="Dr. Apurva K.C" class="doc-photo"/>
+        <div class="hero-info">
+          <div class="hero-name-row">
+            <h1 class="doc-name">Apurva K.C</h1>
+            <span class="hero-rating">&#9733; 4.9</span>
+          </div>
+          <p class="doc-specialty">Pediatrician</p>
+          <div class="doc-tags">
+            <span class="tag">Vaccines</span>
+            <span class="tag">Nutrition</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <p class="fee-label">Consultation fee</p>
+        <p class="fee-amount"><strong>$75</strong> / session</p>
+        <button class="book-btn" id="openBooking">Book Now</button>
+      </div>
+    </div>
+
+    <div class="content-grid">
+
+      <div class="col-left">
+
+        <div class="stats-row">
+          <div class="stat-box"><span class="stat-big">130+</span><span class="stat-label">Patients</span></div>
+          <div class="stat-box"><span class="stat-big">5Y+</span><span class="stat-label">Experience</span></div>
+          <div class="stat-box"><span class="stat-big">98%</span><span class="stat-label">Satisfaction</span></div>
+        </div>
+
+        <div class="about-box">
+          <h3>About</h3>
+          <p>Board-certified pediatrician with 5+ years of experience in child healthcare. Completed training in pediatrics at Karolinska University Hospital. Known for a gentle, child-friendly approach and clear communication with parents. Specializes in preventive care, vaccinations, and childhood nutritional guidance. Fluent in English and Nepali.</p>
+        </div>
+      </div>
+
+      <div class="col-right">
+        <!-- Contact -->
+        <div class="contact-box">
+          <h3>Contact &amp; Location</h3>
+          <div class="contact-grid">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.75-7-11a7 7 0 0 1 14 0c0 4.25-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              </div>
+              <div><p class="ci-label">Location</p><p class="ci-value">Karolinska Clinic, Kathmandu</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.09 4.18 2 2 0 0 1 5.07 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L9.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div><p class="ci-label">Phone</p><p class="ci-value">+977 98-0000-1234</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+              </div>
+              <div><p class="ci-label">Email</p><p class="ci-value">apurva.kc@curalis.com</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews -->
+        <div class="reviews-box">
+          <div class="reviews-header">
+            <h3>Patient Reviews</h3>
+            <a href="#" class="see-all">See All &rsaquo;</a>
+          </div>
+          <div class="reviews-grid">
+            <div class="review-card">
+              <div class="review-top">
+                <span class="reviewer-name">Amir H.</span>
+                <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+              <p>Dr. Apurva is a kind and gentle pediatrician. He made my child feel comfortable and explained everything clearly. We felt confident and well cared for during the visit.</p>
+            </div>
+            <div class="review-card">
+              <div class="review-top">
+                <span class="reviewer-name">Kamala P.</span>
+                <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+              <p>We had a great experience with Dr. Apurva K.C. He was patient, friendly, and attentive to our child's needs. The treatment was effective and easy to follow.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!--Booking modal  -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="bookingModal">
+
+      <!-- Step indicator -->
+      <div class="step-bar">
+        <div class="step active" id="step1ind">
+          <div class="step-circle">1</div>
+          <span class="step-label">Consultation</span>
+        </div>
+        <div class="step-line" id="line1"></div>
+        <div class="step" id="step2ind">
+          <div class="step-circle">2</div>
+          <span class="step-label">Date &amp; Time</span>
+        </div>
+        <div class="step-line" id="line2"></div>
+        <div class="step" id="step3ind">
+          <div class="step-circle">3</div>
+          <span class="step-label">Confirm</span>
+        </div>
+      </div>
+
+      <!--Step 1:-->
+      <div id="step1">
+        <!-- Doctor info row -->
+        <div class="modal-doc-row">
+          <div class="modal-doc-avatar">A</div>
+          <div class="modal-doc-info">
+            <p class="modal-doc-name">Dr. Apurva K.C</p>
+            <p class="modal-doc-spec">Pediatrician</p>
+          </div>
+          <div class="modal-doc-fee">
+            <span class="modal-fee-big">$75</span>
+            <span class="modal-fee-sub">/ session</span>
+          </div>
+        </div>
+
+        <p class="section-label">CONSULTATION TYPE</p>
+        <div class="type-options">
+          <button class="type-btn" data-type="In-Person" data-sub="Visit Clinic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/></svg>
+            <div><p class="type-title">In-Person</p><p class="type-sub">Visit Clinic</p></div>
+          </button>
+          <button class="type-btn" data-type="Video Call" data-sub="From Home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="15" height="10" rx="2"/><path d="M17 9l5-3v12l-5-3"/></svg>
+            <div><p class="type-title">Video Call</p><p class="type-sub">From Home</p></div>
+          </button>
+        </div>
+
+        <!-- Selected type summary row -->
+        <div class="selected-summary" id="typeSummary" style="display:none;">
+          <div>
+            <p class="ss-title" id="ssType"></p>
+            <p class="ss-sub"   id="ssSub"></p>
+          </div>
+          <div class="ss-right">
+            <p class="ss-label">Total</p>
+            <p class="ss-amount">$75</p>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button class="modal-btn outline" id="cancelBtn">Cancel</button>
+          <button class="modal-btn filled" id="toStep2Btn" disabled>Next — Choose Date &#8594;</button>
+        </div>
+      </div>
+
+      <!--Step 2:-->
+      <div id="step2" style="display:none;">
+        <p class="section-label">DATE</p>
+        <div class="date-row" id="dateRow"></div>
+
+        <p class="section-label" style="margin-top:16px;">AVAILABLE SLOTS</p>
+        <p class="slots-placeholder" id="slotsPlaceholder">Select Date First</p>
+        <div class="slots-grid" id="slotsGrid" style="display:none;"></div>
+
+        <div class="modal-actions" style="margin-top:20px;">
+          <button class="modal-btn outline" id="backToStep1Btn">&#8592; Back</button>
+          <button class="modal-btn filled" id="toStep3Btn" disabled>Next — Confirm &#8594;</button>
+        </div>
+      </div>
+
+      <!--Step 3:-->
+      <div id="step3" style="display:none;">
+        <div class="confirm-rows">
+          <div class="confirm-row"><span>Doctor</span><span>Apurva K.C</span></div>
+          <div class="confirm-row"><span>Type</span><span id="cfType"></span></div>
+          <div class="confirm-row"><span>Date</span><span id="cfDate"></span></div>
+          <div class="confirm-row"><span>Time</span><span id="cfTime"></span></div>
+          <div class="confirm-row"><span>Total</span><span>$75</span></div>
+        </div>
+        <div class="modal-actions" style="margin-top:20px;">
+          <button class="modal-btn outline" id="backToStep2Btn">&#8592; Back</button>
+          <button class="modal-btn filled" id="confirmBtn">Confirm Booking</button>
+        </div>
+      </div>
+
+      <!--Confirmed screen -->
+      <div id="confirmScreen" style="display:none;">
+        <p class="confirmed-title">Booking Confirmed As</p>
+        <div class="confirmed-rows">
+          <div class="confirmed-row"><span>Doctor</span><span id="cfDoctorFinal"></span></div>
+          <div class="confirmed-row"><span>Type</span><span id="cfTypeFinal"></span></div>
+          <div class="confirmed-row"><span>Date</span><span id="cfDateFinal"></span></div>
+          <div class="confirmed-row"><span>Time</span><span id="cfTimeFinal"></span></div>
+        </div>
+        <div class="confirmed-actions">
+          <button class="conf-btn outline" id="doneBtn">Done</button>
+          <button class="conf-btn filled"  id="viewBookingBtn">View Booking</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="assets/js/detail.js"></script>
+</body>
+</html>

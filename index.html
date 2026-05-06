@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curalis — Health Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #E6F6F4;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Jost', sans-serif;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0px;
+      margin-top: -100px;
+      margin-bottom: 6px;
+      animation: fadeUp 2s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo { width: 300px; height: 300px; object-fit: contain; margin-bottom: -50px; }
+
+    .cure {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 400;
+      color: #1F3A3A;
+      letter-spacing: .02em;
+      margin-top: 0px;
+    }
+
+    .disc {
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .22em;
+      color: #007F6D;
+      text-transform: uppercase;
+      margin-top: 0px;
+    }
+
+    .btn-row { display: flex; gap: 12px; margin-top: 18px; margin-left: 20px}
+
+    .btn {
+      background: #2A9D8F;
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 10px 28px;
+      font-family: 'Jost', sans-serif;
+      font-size: .92rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .18s, transform .12s;
+    }
+    .btn:hover  { background: #18766C; }
+    .btn:active { background: #0F5C55; transform: scale(.97); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="assets/img/logo.png" alt="Curalis logo" class="logo"/>
+    <h1 class="cure">Curalis</h1>
+    <p class="disc">Health Platform</p>
+    <div class="btn-row">
+      <a href="login.php"  class="btn">Log In</a>
+      <a href="signup.php" class="btn">Sign Up</a>
+    </div>
+  </div>
+</body>
+</html>

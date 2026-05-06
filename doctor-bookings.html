@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curalis - Doctor Bookings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/doctor-bookings.css"/>
+</head>
+<body>
+  <nav class="sidebar">
+    <div class="sidebar-logo"><img src="assets/img/logo.png" alt="Curalis"/></div>
+    <ul class="nav-links">
+      <li class="nav-item" data-page="doctor-home.html" title="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+        <span>Home</span>
+      </li>
+      <li class="nav-item" data-page="doctor-bookings.html" title="Bookings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M12 14v4M10 16h4"/></svg>
+        <span>Bookings</span>
+      </li>
+      <li class="nav-item" data-page="doctor-about.html" title="About">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        <span>About</span>
+    </ul>
+    <div class="profile-wrap">
+      <img src="assets/img/doctor_apurva.png" alt="Doctor profile" class="profile-pic" id="profilePic"/>
+      <div class="profile-menu" id="profileMenu">
+        <div class="profile-summary">
+          <p class="profile-kicker">Clinic status</p>
+          <h3>Dr. Apurva KC</h3>
+          <p>Bookings view, today's patient list</p>
+        </div>
+        <button class="profile-menu-item" id="btnAvailability">Availability</button>
+        <button class="profile-menu-item" id="btnMessages">Messages</button>
+        <button class="profile-menu-item logout" id="btnLogout">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="hero">
+      <div class="hero-left">
+        <p class="hero-kicker">Doctor bookings</p>
+        <h1>Patient appointments</h1>
+        <div class="hero-stats">
+          <div class="hero-stat"><span class="hs-num">8</span><span class="hs-label">Today's patients</span></div>
+          <div class="hero-stat"><span class="hs-num">3</span><span class="hs-label">Video consults</span></div>
+          <div class="hero-stat"><span class="hs-num">2</span><span class="hs-label">Awaiting notes</span></div>
+        </div>
+      </div>
+      <div class="tab-toggle">
+        <button class="tab-btn active" id="tabUpcoming">Upcoming</button>
+        <button class="tab-btn" id="tabCompleted">Completed</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="left-col">
+        <div id="upcomingView">
+          <p class="section-label">Today</p>
+          <div class="booking-card dark">
+            <div class="bc-top">
+              <div class="bc-avatar">ST</div>
+              <div class="bc-info">
+                <h3>Susan Tamang</h3>
+                <p>Pediatric follow-up</p>
+              </div>
+              <span class="bc-badge">IN 24 mins</span>
+            </div>
+            <div class="bc-details">
+              <div><p class="bd-label">Date</p><p class="bd-value">Today</p></div>
+              <div><p class="bd-label">Time</p><p class="bd-value">9:30 AM</p></div>
+              <div><p class="bd-label">Type</p><p class="bd-value">Video</p></div>
+            </div>
+            <div class="patient-note">
+              <p class="note-title">Parent note</p>
+              <p>Low-grade fever for two nights, appetite slightly reduced, no rash reported.</p>
+            </div>
+            <div class="bc-actions">
+              <button class="bc-btn outline">Open chart</button>
+              <button class="bc-btn filled">Start consult</button>
+            </div>
+          </div>
+
+          <p class="section-label" style="margin-top:20px;">Later today</p>
+          <div class="booking-card dark">
+            <div class="bc-top">
+              <div class="bc-avatar">AS</div>
+              <div class="bc-info">
+                <h3>Arjun Shrestha</h3>
+                <p>Vaccination review</p>
+              </div>
+              <span class="bc-badge muted">11:00 AM</span>
+            </div>
+            <div class="bc-details">
+              <div><p class="bd-label">Date</p><p class="bd-value">Today</p></div>
+              <div><p class="bd-label">Time</p><p class="bd-value">11:00 AM</p></div>
+              <div><p class="bd-label">Type</p><p class="bd-value">In Person</p></div>
+            </div>
+            <div class="patient-note">
+              <p class="note-title">Care focus</p>
+              <p>Growth chart update requested, parent wants a printed vaccination schedule.</p>
+            </div>
+            <div class="bc-actions">
+              <button class="bc-btn outline">Open chart</button>
+              <button class="bc-btn cancel">Move slot</button>
+            </div>
+          </div>
+
+          <div class="booking-card dark">
+            <div class="bc-top">
+              <div class="bc-avatar">MK</div>
+              <div class="bc-info">
+                <h3>Mina Karki</h3>
+                <p>Medication tolerance review</p>
+              </div>
+              <span class="bc-badge muted">2:15 PM</span>
+            </div>
+            <div class="bc-details">
+              <div><p class="bd-label">Date</p><p class="bd-value">Today</p></div>
+              <div><p class="bd-label">Time</p><p class="bd-value">2:15 PM</p></div>
+              <div><p class="bd-label">Type</p><p class="bd-value">Video</p></div>
+            </div>
+            <div class="patient-note">
+              <p class="note-title">Care focus</p>
+              <p>Review lab feedback before the call, guardian asked about evening dosage timing.</p>
+            </div>
+            <div class="bc-actions">
+              <button class="bc-btn outline">Open chart</button>
+              <button class="bc-btn filled">Prep notes</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="completedView" style="display:none;">
+          <p class="section-label">Completed today</p>
+          <div class="booking-card dark">
+            <div class="bc-top">
+              <div class="bc-avatar">PK</div>
+              <div class="bc-info">
+                <h3>Pranaya Khatri</h3>
+                <p>Respiratory check</p>
+              </div>
+              <span class="bc-badge done">Signed off</span>
+            </div>
+            <div class="bc-details">
+              <div><p class="bd-label">Date</p><p class="bd-value">Today</p></div>
+              <div><p class="bd-label">Time</p><p class="bd-value">8:00 AM</p></div>
+              <div><p class="bd-label">Type</p><p class="bd-value">Video</p></div>
+            </div>
+            <div class="patient-note">
+              <p class="note-title">Outcome</p>
+              <p>Symptoms improved, inhaler plan continued, revisit only if wheezing returns.</p>
+            </div>
+            <div class="bc-actions">
+              <button class="bc-btn outline">View summary</button>
+              <button class="bc-btn filled">Send follow-up</button>
+            </div>
+          </div>
+
+          <p class="section-label" style="margin-top:20px;">Earlier this week</p>
+          <div class="booking-card dark">
+            <div class="bc-top">
+              <div class="bc-avatar">RT</div>
+              <div class="bc-info">
+                <h3>Riya Thapa</h3>
+                <p>Nutrition consult</p>
+              </div>
+              <span class="bc-badge done">Summary pending</span>
+            </div>
+            <div class="bc-details">
+              <div><p class="bd-label">Date</p><p class="bd-value">Apr 27</p></div>
+              <div><p class="bd-label">Time</p><p class="bd-value">1:40 PM</p></div>
+              <div><p class="bd-label">Type</p><p class="bd-value">In Person</p></div>
+            </div>
+            <div class="patient-note">
+              <p class="note-title">Outcome</p>
+              <p>Follow-up call needed after bloodwork arrives, parent asked for diet handout.</p>
+            </div>
+            <div class="bc-actions">
+              <button class="bc-btn outline">View summary</button>
+              <button class="bc-btn cancel">Finish note</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-col">
+        <div class="summary-box">
+          <h3>Clinic summary</h3>
+          <div class="summary-grid">
+            <div class="summary-stat"><span class="ss-num">18</span><span class="ss-label">Patients this week</span></div>
+            <div class="summary-stat"><span class="ss-num">96%</span><span class="ss-label">On-time start rate</span></div>
+            <div class="summary-stat"><span class="ss-num">2</span><span class="ss-label">Notes pending</span></div>
+            <div class="summary-stat"><span class="ss-num">4</span><span class="ss-label">Family callbacks</span></div>
+          </div>
+        </div>
+
+        <div class="recent-box">
+          <div class="recent-header">
+            <h3>Recently completed</h3>
+            <a href="doctor-home.html" class="see-all">Back home</a>
+          </div>
+          <div class="recent-list">
+            <div class="recent-item">
+              <div class="r-avatar">PK</div>
+              <div class="r-info"><p class="r-name">Pranaya Khatri</p><p class="r-sub">Respiratory check · Video</p></div>
+              <span class="r-date">Today</span>
+            </div>
+            <div class="recent-item">
+              <div class="r-avatar">RT</div>
+              <div class="r-info"><p class="r-name">Riya Thapa</p><p class="r-sub">Nutrition consult · In Person</p></div>
+              <span class="r-date">Apr 27</span>
+            </div>
+            <div class="recent-item">
+              <div class="r-avatar">AB</div>
+              <div class="r-info"><p class="r-name">Aayush Bista</p><p class="r-sub">Vaccination Consult · Video</p></div>
+              <span class="r-date">Apr 25</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/doctor-bookings.js"></script>
+</body>
+</html>

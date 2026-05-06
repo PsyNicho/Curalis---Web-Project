@@ -1,0 +1,65 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+body.modal-open { overflow: hidden; }
+
+.nav-links li { width: 100%; }
+
+.nav-item {
+  text-decoration: none;
+}
+
+.nav-item[aria-current="page"] {
+  background: var(--sidebar-hover);
+  color: #fff;
+}
+
+.nav-item:focus-visible,
+.profile-trigger:focus-visible,
+.profile-menu-item:focus-visible,
+.filter-btn:focus-visible,
+.book-btn:focus-visible,
+.bc-btn:focus-visible,
+.tab-btn:focus-visible,
+.type-btn:focus-visible,
+.date-btn:focus-visible,
+.slot-btn:focus-visible,
+.modal-btn:focus-visible,
+.conf-btn:focus-visible,
+.bc-write-review:focus-visible,
+.chip:focus-visible {
+  outline: 3px solid rgba(255,255,255,0.9);
+  outline-offset: 3px;
+}
+
+.profile-trigger {
+  border: 0;
+  background: none;
+  padding: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.profile-trigger:hover .profile-pic,
+.profile-trigger:focus-visible .profile-pic {
+  border-color: var(--accent);
+}
+
+.profile-menu-item {
+  text-decoration: none;
+  width: 100%;
+}
+
+.profile-menu-item[disabled] {
+  opacity: .5;
+  cursor: not-allowed;
+}
